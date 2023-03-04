@@ -29,8 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/oanh-hth/FMS-NFT-Preview-Card-Component
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
+- Live Site URL: https://oanh-hth.github.io/FMS-NFT-Preview-Card-Component
 ## My process
 
 ### Built with
