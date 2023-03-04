@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-soft-blue: hsl(215, 51%, 70%);
+    --color-cyan: hsl(178, 100%, 50%);
+    --bg-color: hsl(217, 54%, 11%);
+    --bg-card: hsl(216, 50%, 16%);
+    --color-line: hsl(215, 32%, 27%);
+    --color-white: hsl(0, 0%, 100%);
+    --font-size-sm: 0.875rem;
+    --font-size-regular: 1rem;
+    --font-size-md: 1.125rem;
+    --font-size-lg: 1.25rem;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover, a:focus {
+    outline: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: calc(16px + 2 * (100vw - 375px) / 1065);
+    color: var(--color-soft-blue);
+    font-weight: var(--font-weight-light);
+    background-color: var(--bg-color);
+}
+
+h1 {
+    font-size: var(--font-size-lg);
+    color: var(--color-white);
+    font-weight: var(--font-weight-bold);
+    margin-block: 1em;
+}
+
+h1 a:hover,
+h1 a:focus {
+    color: var(--color-cyan);
+}
+
+p:first-of-type {
+    line-height: 1.5;
+}
+
+img + p:last-of-type {
+    font-size: var(--font-size-regular);
+    
+}
+
+img + p:last-of-type a {
+    color: var(--color-white);
+    font-weight: var(--font-weight-normal);
+}
+
+p:last-of-type a:hover,
+p:last-of-type a:focus {
+    color: var(--color-cyan);
+}
+
+div:first-of-type img {
+    border-radius: 15px;
+}
+
+div:first-of-type a {
+    position: relative;
+}
+
+div:first-of-type a::before {
+    content: url('images/icon-view.svg');
+    background-color: var(--color-cyan);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    border-radius: 15px;
+    opacity: 50%;
+}
+
+div:first-of-type a:hover::before,
+div:first-of-type a:focus::before {
+    display: flex;
+}
+
+div:nth-of-type(2) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid var(--color-line);
+}
+
+div:nth-of-type(2) span {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+div:nth-of-type(2) span:first-child {
+    text-transform: uppercase;
+    color: var(--color-cyan);
+    font-weight: var(--font-weight-bold);
+}
+
+div:nth-of-type(2) span:first-child::before {
+    content: url('images/icon-ethereum.svg');
+}
+
+div:nth-of-type(2) span:last-child::before {
+    content: url('images/icon-clock.svg');
+    width: var(--font-size-regular);
+    height: var(--font-size-regular);
+}
+
+div:last-of-type {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+div:last-of-type img {
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--color-white);
+    border-radius: 50%;
+}
+
+article {
+    width: min(100vw - 3rem, 22rem);
+    background-color: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
